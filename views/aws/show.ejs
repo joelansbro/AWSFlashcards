@@ -6,7 +6,7 @@
         <%- include('../partials/head'); %>
     </head>
     <body>
-        
+
         <header>
             <%- include('../partials/header'); %>
         </header>
@@ -15,7 +15,7 @@
         <ul>
             <li>Description: <%= awsOne.description %></li>
             <li>Keywords: <%= awsOne.keywords %></li>
-            <li>Domain: <%= awsOne.domain %></li>
+            <li>Domain: <a href="/?domain=<%= awsOne.domain %>"><%= awsOne.domain %></a></li>
         </ul>
         <a href="/<%= awsOne._id %>/edit">Edit User</a>
         <a href="/">back to all users</a>

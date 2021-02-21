@@ -20,8 +20,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
 app.get('/', async (req, res)=>{
-    const aws = await awsBase.find({});
-    res.render('aws/index', { aws })
+    const { domain } = req.query;
+    if(domain){
+        const aws = await awsBase.find({ domain });
+        res.render('aws/index', { aws, domain })
+    }else{
+        const aws = await awsBase.find({});
+        res.render('aws/index', { aws, domain: 'All' });
+    }
 })
 
 app.get('/new', (req, res)=>{

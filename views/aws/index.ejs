@@ -12,7 +12,7 @@
             <%- include('../partials/header'); %>
         </header>
 
-        <h1>All Concepts</h1>
+        <h1><%= domain %></h1>
         <ul>
             <% for(let concept of aws){ %>
                 <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
