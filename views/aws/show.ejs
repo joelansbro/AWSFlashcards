@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><%= awsOne.concept %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1><%= awsOne.concept %></h1>
+        <ul>
+            <li>Description: <%= awsOne.description %></li>
+            <li>Keywords: <%= awsOne.keywords %></li>
+            <li>Domain: <%= awsOne.domain %></li>
+        </ul>
+        <a href="/<%= awsOne._id %>/edit">Edit User</a>
+        <a href="/">back to all users</a>
+    </body>
+</html>

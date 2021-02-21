@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- define some of these form options as required before submission.-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add new concept</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>New Concept</h1>
+        <p>Fill in the details of the new concept</p>
+        <form action="/" method="POST">
+            <input type="text" name="concept" placeholder="Concept Name" required>
+            <textarea placeholder="A short description of the Concept" name="description" id="description" cols="50" rows="10"></textarea>
+            <input type="text" name="keywords" placeholder="keywords">
+            <select id="domain" name="domain">
+                <option value="Cloud Concepts">Cloud Concepts</option>
+                <option value="Security">Security</option>
+                <option value="Technology">Technology</option>
+                <option value="Billing">Billing</option>
+              </select>
+              <button>Submit</button>
+        </form>
+    </body>
+</html>

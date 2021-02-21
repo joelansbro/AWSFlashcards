@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>All Concepts</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>All Concepts</h1>
+        <ul>
+            <% for(let concept of aws){ %>
+                <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
+            <% } %>
+        </ul>
+        <a href="/new">Add New Concept</a>
+
+    </body>
+</html>

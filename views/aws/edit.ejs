@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!-- the select tag resets to america each time. I cba doing this now but I'm sure that the Colt Steele Udemy video showed me how to deal with this property-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Edit a concept</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Edit Concept</h1>
+        <p>Fill in the details below to edit the concept details</p>
+        <form action="/<%= oneUser._id %>?_method=PUT" method="POST">
+            <label for="name">Concept Name:</label>
+            <input type="text" name="concept" value="<%= awsOne.concept %>">
+            <label for="bio">Description:</label>
+            <textarea name="description" id="description" cols="50" rows="10"><%= awsOne.description %></textarea>
+            <label for="keywords">Keywords:</label>
+            <input type="text" name="keywords" value="<%= awsOne.keywords %>">
+            <label for="domain">domain:<%= awsOne.domain %></label>
+            <select id="domain" name="domain">
+                <option value="Cloud Concepts">Cloud Concepts</option>
+                <option value="Security">Security</option>
+                <option value="Technology">Technology</option>
+                <option value="Billing">Billing</option>
+              </select>
+              <button>Submit</button>
+        </form>
+        
+        <a href="/<%= awsOne._id %>">Back to user</a>
+        <a href="/">Back to all users</a>
+
+        <form action="/<%= awsOne._id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+
+    </body>
+</html>
