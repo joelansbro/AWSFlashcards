@@ -2,13 +2,16 @@
 
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>All Concepts</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <%- include('../partials/head'); %>
     </head>
-    <body>
+
+    <body class="container-fluid">
+
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
         <h1>All Concepts</h1>
         <ul>
             <% for(let concept of aws){ %>
@@ -16,6 +19,10 @@
             <% } %>
         </ul>
         <a href="/new">Add New Concept</a>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
 
     </body>
 </html>

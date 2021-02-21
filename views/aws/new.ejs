@@ -2,14 +2,16 @@
 <!-- define some of these form options as required before submission.-->
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add new concept</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <title>New Concept</title>
+        <%- include('../partials/head'); %>
     </head>
+
     <body>
+
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
         <h1>New Concept</h1>
         <p>Fill in the details of the new concept</p>
         <form action="/" method="POST">
@@ -24,5 +26,6 @@
               </select>
               <button>Submit</button>
         </form>
+        <a href="/">Back to all concepts</a>
     </body>
 </html>

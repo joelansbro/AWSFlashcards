@@ -9,11 +9,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+
+                <title><%= awsOne.concept %></title>
+        <%- include('../partials/head'); %>
     </head>
     <body>
+        
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
         <h1>Edit Concept</h1>
         <p>Fill in the details below to edit the concept details</p>
-        <form action="/<%= oneUser._id %>?_method=PUT" method="POST">
+        <form action="/<%= awsOne._id %>?_method=PUT" method="POST">
             <label for="name">Concept Name:</label>
             <input type="text" name="concept" value="<%= awsOne.concept %>">
             <label for="bio">Description:</label>
