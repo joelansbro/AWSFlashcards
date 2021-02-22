@@ -6,23 +6,43 @@
         <%- include('../partials/head'); %>
     </head>
 
-    <body class="container-fluid">
+    <body>
 
         <header>
             <%- include('../partials/header'); %>
         </header>
 
-        <h1><%= domain %></h1>
-        <ul>
-            <% for(let concept of aws){ %>
-                <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
-            <% } %>
-        </ul>
-        <a href="/new">Add New Concept</a>
+        <div class="container aws-box-main">
+            <h1><%= domain %></h1>
+            <ul>
+                <% for(let concept of aws){ %>
+                    <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
+                <% } %>
+            </ul>
+            <a href="/new">Add New Concept</a>
 
-        <footer>
-            <%- include('../partials/footer'); %>
-        </footer>
 
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Cloud%20Concepts">Cloud Concepts</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Security">Security</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Technology">Technology</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Billing">Billing</a></h4>
+              </div>
+            </div>
+          </div>
+          
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
     </body>
 </html>
