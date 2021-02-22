@@ -11,15 +11,16 @@
         <header>
             <%- include('../partials/header'); %>
         </header>
-
+        <div class="container aws-title">
+        <h1><%= domain %></h1>
+        </div>
         <div class="container aws-box-main">
-            <h1><%= domain %></h1>
+
             <ul>
                 <% for(let concept of aws){ %>
                     <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
                 <% } %>
             </ul>
-            <a href="/new">Add New Concept</a>
 
 
         </div>
@@ -40,7 +41,7 @@
               </div>
             </div>
           </div>
-          
+
     <footer>
         <%- include('../partials/footer'); %>
     </footer>

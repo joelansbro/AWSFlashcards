@@ -27,7 +27,7 @@ app.get('/', async (req, res)=>{
         res.render('aws/index', { aws, domain })
     }else{
         const aws = await awsBase.find({});
-        res.render('aws/index', { aws, domain: 'All' });
+        res.render('aws/index', { aws, domain: 'AWS Cloud Cert Practitioner Notes' });
     }
 })
 

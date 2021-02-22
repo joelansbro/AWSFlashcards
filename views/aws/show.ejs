@@ -13,24 +13,28 @@
     <div class="container">
 
         <h1><%= awsOne.concept %></h1>
-        <div class="col-sm aws-box">
+        <div class="col-sm aws-box-main">
         <ul>
             <li>Description: <%= awsOne.description %></li>
             <li>Keywords: <%= awsOne.keywords %></li>
-            <li>Domain: <a href="/?domain=<%= awsOne.domain %>"><%= awsOne.domain %></a></li>
+            <li>Domain: </li>
         </ul>
-        <div class="aws-box-nav">
-        <a href="/<%= awsOne._id %>/edit">Edit User</a>
-        <a href="/">back to all users</a>
-        </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm aws-box">
+                <a href="/?domain=<%= awsOne.domain %>"><%= awsOne.domain %></a>
+            </div>
+            <div class="col-sm aws-box">
+                <a href="/<%= awsOne._id %>/edit">Edit User</a>
+            </div>
+            <div class="col-sm aws-box">
+                <a href="/">back to all users</a>
+            </div>
+        </div>
     </div>
+
+    </div>
+
     </body>
 </html>
-
-
-<div class="row">
-    <div class="col-sm aws-box">
-      <h4><a href="/?domain=Cloud%20Concepts">Cloud Concepts</a></h4>
-    </div>
