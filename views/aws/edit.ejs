@@ -18,16 +18,29 @@
         <header>
             <%- include('../partials/header'); %>
         </header>
+        <div class="container aws-title">
+            <h1>Edit Concept</h1>
+        </div>
+        
+        <div class="container">
 
-        <h1>Edit Concept</h1>
+        <div class="aws-box-main aws-form">
         <p>Fill in the details below to edit the concept details</p>
+
         <form action="/<%= awsOne._id %>?_method=PUT" method="POST">
-            <label for="name">Concept Name:</label>
-            <input type="text" name="concept" value="<%= awsOne.concept %>">
+            <div class="item">
+                <label for="name">Concept Name:</label>
+                <input type="text" name="concept" value="<%= awsOne.concept %>">
+            </div>
+            <div class="item">
             <label for="bio">Description:</label>
             <textarea name="description" id="description" cols="50" rows="10"><%= awsOne.description %></textarea>
+            </div>
+            <div class="item">
             <label for="keywords">Keywords:</label>
             <input type="text" name="keywords" value="<%= awsOne.keywords %>">
+            </div>
+            <div class="item">
             <label for="domain">domain:<%= awsOne.domain %></label>
             <select id="domain" name="domain">
                 <option value="Cloud Concepts">Cloud Concepts</option>
@@ -35,15 +48,34 @@
                 <option value="Technology">Technology</option>
                 <option value="Billing">Billing</option>
               </select>
-              <button>Submit</button>
-        </form>
-        
-        <a href="/<%= awsOne._id %>">Back to user</a>
-        <a href="/">Back to all users</a>
+              </div>
+              <div class="item">
+                <button>Submit</button>
+              </div>
 
-        <form action="/<%= awsOne._id %>?_method=DELETE" method="POST">
-            <button>Delete</button>
         </form>
+        </div>
+        
+        <div class="container">
+        <div class="row">
+            <div class="col-sm aws-box">
+                <a href="/<%= awsOne._id %>">Back to Concept</a>
+            </div>
+
+            <div class="col-sm aws-box">
+                <a href="/">Back to all Concepts</a>
+            </div>
+
+            <div class="col-sm aws-box">
+                <form action="/<%= awsOne._id %>?_method=DELETE" method="POST">
+                    <button>Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
 
     </body>
 </html>
