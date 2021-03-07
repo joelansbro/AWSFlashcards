@@ -27,15 +27,18 @@ app.get('/', async (req, res)=>{
     const { domain } = req.query;
     if(domain){
         const aws = await awsBase.find({ domain });
-        res.render('aws/index', { aws, domain })
+        res.render('aws/index', { aws, domain });
+        // res.view('viewname', { title: 'AWS Notes', data });
     }else{
         const aws = await awsBase.find({});
         res.render('aws/index', { aws, domain: 'AWS Cloud Cert Practitioner Notes' });
+        // res.view('viewname', { title: 'AWS Notes', data });
     }
 })
 
 app.get('/new', (req, res)=>{
     res.render('aws/new');
+    // res.view('viewname', { title: 'New Concept', data });
 })
 
 app.post('/', async (req,res)=>{
@@ -48,6 +51,7 @@ app.get('/:id/edit', async (req, res)=>{
     const { id } = req.params;
     const awsOne = await awsBase.findById(id);
     res.render('aws/edit', {awsOne});
+    // res.view('viewname', { title: 'Edit Concept', data });
 })
 
 app.put('/:id', async (req, res)=>{
@@ -60,6 +64,7 @@ app.get('/:id', async (req, res)=>{
     const { id } = req.params;
     const awsOne = await awsBase.findById(id);
     res.render('aws/show', {awsOne});
+    // res.view('viewname', { title: 'View Concept', data });
 })
 
 app.delete('/:id', async (req, res)=>{
