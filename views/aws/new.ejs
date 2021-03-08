@@ -4,38 +4,33 @@
         <h1>New Concept</h1>
         </div>
     
-        <div class="container">
-            <div class="aws-box-main aws-form">
+    <div class="container">
+        <div class="aws-box-main aws-form">
             <p>Generate your new note below</p>
-        <form action="/" method="POST">
-
-            <div class="item">
-                <input type="text" name="concept" placeholder="Concept Name" required>
-            </div>
-
-            <div class="item">
+        
+            <form action="/" method="POST">
+                <div class="item">
+                    <input type="text" name="concept" placeholder="Concept Name" required>
+                </div>
+                <div class="item">
                     <textarea placeholder="A short description of the Concept" name="description" id="description" cols="50" rows="10"></textarea>
-            </div>
-
-            <div class="item">
-                <input type="text" name="keywords" placeholder="keywords">
-            </div>
-
-            <div class="item">
-                <select id="domain" name="domain">
-                    <option value="Cloud Concepts">Cloud Concepts</option>
-                    <option value="Security">Security</option>
-                    <option value="Technology">Technology</option>
-                    <option value="Billing">Billing</option>
-                </select>
-            </div>
-
-            <div class="item">
-                <button>Submit</button>
-            </div>
-
-        </form>
-    </div>
+                </div>
+                <div class="item">
+                    <input type="text" name="keywords" placeholder="keywords">
+                </div>
+                <div class="item">
+                    <select id="domain" name="domain">
+                        <option value="Cloud Concepts">Cloud Concepts</option>
+                        <option value="Security">Security</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Billing">Billing</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
 
         <div class="row">
             <div class="aws-box back">

@@ -1,11 +1,10 @@
 <% layout('partials/boilerplate') %>
 
-<!-- the select tag resets to america each time. I cba doing this now but I'm sure that the Colt Steele Udemy video showed me how to deal with this property-->
-        <div class="container aws-title">
-            <h1>Edit Concept</h1>
-        </div>
+    <div class="container aws-title">
+        <h1>Edit Concept</h1>
+    </div>
         
-        <div class="container">
+    <div class="container">
 
         <div class="aws-box-main aws-form">
         <p>Fill in the details below to edit the concept details</p>
@@ -40,21 +39,21 @@
         </div>
         
         <div class="container">
-        <div class="row">
-            <div class="col-sm aws-box">
-                <a href="/<%= awsOne._id %>">Back to Concept</a>
-            </div>
+            <div class="row">
+                <div class="col-sm aws-box">
+                    <a href="/<%= awsOne._id %>">Back to Concept</a>
+                </div>
 
-            <div class="col-sm aws-box">
-                <a href="/">Back to all Concepts</a>
-            </div>
+                <div class="col-sm aws-box">
+                    <a href="/">Back to all Concepts</a>
+                </div>
 
-            <div class="col-sm aws-box">
-                <form action="/<%= awsOne._id %>?_method=DELETE" method="POST">
-                    <button>Delete</button>
-                </form>
+                <div class="col-sm aws-box">
+                    <form action="/<%= awsOne._id %>?_method=DELETE" method="POST">
+                        <button>Delete</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
