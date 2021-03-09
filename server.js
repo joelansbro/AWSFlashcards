@@ -23,6 +23,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use( express.static( "public" ) );
 
+
+// index page to show all files //
 app.get('/', async (req, res)=>{
     const { domain } = req.query;
     if(domain){
@@ -36,17 +38,28 @@ app.get('/', async (req, res)=>{
     }
 })
 
+// supposed to be the search function //
+// currently setup to mimic the above category search, however we want it to search for anything within the categories 
+// app.get('/search', async (req, res)=>{
+//     const { results } = req.query;
+//     const aws = await awsBase.find({ results });
+//     res.render('aws/results', {aws, results});
+// })
+
+// New Concept Page //
 app.get('/new', (req, res)=>{
     res.render('aws/new');
     // res.view('viewname', { title: 'New Concept', data });
 })
 
+// Post Request to Create a concept //
 app.post('/', async (req,res)=>{
     const awsNew = new awsBase(req.body);
     await awsNew.save();
     res.redirect(`/${awsNew._id}`);
 })
 
+// Edit individual concept page //
 app.get('/:id/edit', async (req, res)=>{
     const { id } = req.params;
     const awsOne = await awsBase.findById(id);
@@ -54,12 +67,14 @@ app.get('/:id/edit', async (req, res)=>{
     // res.view('viewname', { title: 'Edit Concept', data });
 })
 
+// Post request from the edit concept page //
 app.put('/:id', async (req, res)=>{
     const { id } = req.params;
     const aws = await awsBase.findByIdAndUpdate(id, req.body, {runValidators: true, new: true});
     res.redirect(`/${aws._id}`);
 })
 
+// show individual concept page //
 app.get('/:id', async (req, res)=>{
     const { id } = req.params;
     const awsOne = await awsBase.findById(id);
@@ -69,7 +84,7 @@ app.get('/:id', async (req, res)=>{
 
 app.delete('/:id', async (req, res)=>{
     const { id } = req.params;
-    const deleteUser = await awsBase.findByIdAndDelete(id);
+    const awsDelete = await awsBase.findByIdAndDelete(id);
     res.redirect('/');
 })
 

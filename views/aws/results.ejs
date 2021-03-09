@@ -1,0 +1,32 @@
+<% layout('partials/boilerplate') %>
+
+        <div class="container aws-title">
+        <h1><%= results %></h1>
+        </div>
+        <div class="container aws-box-main">
+
+            <ul>
+                <% for(let concept of aws){ %>
+                    <li><a href="/<%= concept._id %>"><%= concept.concept %> - <%=  concept.keywords %></a></li>
+                <% } %>
+            </ul>
+
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Cloud%20Concepts">Cloud Concepts</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Security">Security</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Technology">Technology</a></h4>
+              </div>
+              <div class="col-sm aws-box">
+                <h4><a href="/?domain=Billing">Billing</a></h4>
+              </div>
+            </div>
+          </div>
