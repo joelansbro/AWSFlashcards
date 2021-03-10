@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const awsBase = require('./models/users');
 const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
+const open = require('open');
 
 mongoose.connect('mongodb://localhost:27017/aws', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=>{
@@ -23,6 +24,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use( express.static("public" ) );
 
+open('http://localhost:3000');
 
 // index page to show all files //
 app.get('/', async (req, res)=>{
