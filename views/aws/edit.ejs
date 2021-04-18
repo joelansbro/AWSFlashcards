@@ -23,12 +23,12 @@
             <input type="text" name="keywords" value="<%= awsOne.keywords %>">
             </div>
             <div class="item">
-            <label for="domain">domain:<%= awsOne.domain %></label>
+            <label for="domain">Domain:</label>
             <select id="domain" name="domain">
-                <option value="Cloud Concepts">Cloud Concepts</option>
-                <option value="Security">Security</option>
-                <option value="Technology">Technology</option>
-                <option value="Billing">Billing</option>
+                <option value="Cloud Concepts" <% if (awsOne.domain==="Cloud Concepts"){ %> selected <% } %>>Cloud Concepts</option>
+                <option value="Security" <% if (awsOne.domain==="Security"){ %> selected <% } %>>Security</option>
+                <option value="Technology" <% if (awsOne.domain==="Technology"){ %> selected <% } %>>Technology</option>
+                <option value="Billing" <% if (awsOne.domain==="Billing"){ %> selected <% } %>>Billing</option>
               </select>
               </div>
               <div class="item">
