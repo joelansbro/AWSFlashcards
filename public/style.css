@@ -80,3 +80,7 @@ h1 {
     text-align: center;
     padding-top: 0.25em;
 }
+
+.show-description {
+    white-space: pre-line;
+}
