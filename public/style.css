@@ -84,3 +84,7 @@ h1 {
 .show-description {
     white-space: pre-line;
 }
+
+ul {
+    list-style-type: none;
+}
